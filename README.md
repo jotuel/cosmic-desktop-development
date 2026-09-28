@@ -1,39 +1,31 @@
-# COSMIC Desktop Agent Skills
+# COSMIC Desktop Agent Skill
 
-A collection of Agent Skills conforming to the [agentskills.io](https://agentskills.io) and [Zed AI Skills](https://zed.dev/docs/ai/skills) specifications for System76 COSMIC Desktop application development.
+An Agent Skill conforming to the [agentskills.io](https://agentskills.io) and [Zed AI Skills](https://zed.dev/docs/ai/skills) specifications for System76 COSMIC Desktop application development.
 
-These skills are designed to equip AI coding assistants (like Zed Agent, GitHub Copilot, or Gemini) with the precise domain knowledge and execution scripts required to develop, test, and profile libcosmic applications.
+This skill equips AI coding assistants (such as Zed Agent, GitHub Copilot, Claude Code, or Gemini) with the domain knowledge, architecture patterns, and automation/profiling scripts required to develop, test, and profile libcosmic applications.
 
-## Included Skills
+## Installation
 
-### 1. `cosmic-development`
-* **Description**: Best practices, guidelines, Model-View-Update (MVU) pattern, widget styling, and lazy store decryption troubleshooting for System76 COSMIC desktop development.
-* **Installation**:
-  ```bash
-  npx skills add jotuel/cosmic-skills/cosmic-development
-  ```
+Install using the `skills` CLI:
+```bash
+npx skills add jotuel/cosmic-skills
+```
 
-### 2. `cosmic-ui-automation`
-* **Description**: Automate, navigate, and capture visual screenshots of native COSMIC/Wayland application layouts during UI/UX inspections.
-* **Installation**:
-  ```bash
-  npx skills add jotuel/cosmic-skills/cosmic-ui-automation
-  ```
+Or for Zed AI:
+Clone or link this repository to your Zed skills directory (`~/.config/zed/skills/cosmic` or `.zed/skills/cosmic`).
 
-### 3. `cosmic-profiling`
-* **Description**: Profile performance, memory heap usage, and execution hotspots of native COSMIC/Wayland applications under automated load.
-* **Installation**:
-  ```bash
-  npx skills add jotuel/cosmic-skills/cosmic-profiling
-  ```
+## Skill Structure
 
----
+The `cosmic` skill unifies development guidelines, UI automation, and performance profiling into a single skill utilizing progressive disclosure:
 
-## Folder Structure
-
-Each skill folder contains:
-* `SKILL.md`: The core metadata frontmatter and agent instruction manual.
-* `scripts/`: Executable utility scripts (like automated test runners or profilers) that the agent can execute directly under the sandbox.
+* **`SKILL.md`**: Core metadata frontmatter, routing instructions, and quick-reference rules.
+* **`references/`**: Detailed domain knowledge and guides loaded on-demand:
+  * [`references/development.md`](references/development.md): Architecture (MVU), libcosmic widget styling, theming, config management, and encrypted store troubleshooting.
+  * [`references/ui-automation.md`](references/ui-automation.md): Automated Wayland interaction simulation (`wtype`) and screenshot inspection (`cosmic-screenshot`).
+  * [`references/profiling.md`](references/profiling.md): CPU hotspots (`samply`) and heap memory profiling (`heaptrack`).
+* **`scripts/`**: Executable helper scripts:
+  * `scripts/test_ui.sh`: Automated Wayland UI navigation and screenshot capture.
+  * `scripts/profile_run.sh`: Automated release-build profiling with `samply` or `heaptrack`.
 
 ---
 
