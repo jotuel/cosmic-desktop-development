@@ -1,10 +1,10 @@
 ---
-name: cosmic
+name: cosmic-desktop-development
 description: Guidelines, best practices, UI automation, and performance profiling for System76 COSMIC desktop applications and applets using libcosmic.
 license: MIT
 metadata:
-  version: "2026-09-28"
-  source: "https://github.com/jotuel/cosmic-skills"
+  version: "2026-10-20"
+  source: "https://github.com/jotuel/cosmic-desktop-development"
 ---
 
 # COSMIC Desktop Development, UI Automation, and Profiling
