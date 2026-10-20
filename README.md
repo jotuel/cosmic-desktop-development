@@ -12,11 +12,11 @@ npx skills add jotuel/cosmic-desktop-development
 ```
 
 Or for Zed AI:
-Clone or link this repository to your Zed skills directory (`~/.config/zed/skills/cosmic` or `.zed/skills/cosmic`).
+Clone or link this repository to your Zed skills directory (`~/.config/zed/skills/cosmic-desktop-development` or `.zed/skills/cosmic-desktop-development`).
 
 ## Skill Structure
 
-The `cosmic` skill unifies development guidelines, UI automation, and performance profiling into a single skill utilizing progressive disclosure:
+The `cosmic-desktop-development` skill unifies development guidelines, UI automation, and performance profiling into a single skill utilizing progressive disclosure:
 
 * **`SKILL.md`**: Core metadata frontmatter, routing instructions, and quick-reference rules.
 * **`references/`**: Detailed domain knowledge and guides loaded on-demand:
