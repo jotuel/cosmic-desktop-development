@@ -8,7 +8,7 @@ This skill equips AI coding assistants (such as Zed Agent, GitHub Copilot, Claud
 
 Install using the `skills` CLI:
 ```bash
-npx skills add jotuel/cosmic-skills
+npx skills add jotuel/cosmic-desktop-development
 ```
 
 Or for Zed AI:
